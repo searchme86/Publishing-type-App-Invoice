@@ -1,11 +1,12 @@
-export class Invoice {
+import { HasFormatter } from '../interfaces/HasFormatter';
+export class Invoice implements HasFormatter {
   constructor(
     readonly client: string,
     private details: string,
     public amount: number
   ) {}
 
-  form() {
+  format() {
     return `${this.client} owns $${this.amount} for ${this.details}`;
   }
 }
