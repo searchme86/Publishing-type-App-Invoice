@@ -15,12 +15,15 @@ const list = new ListTemplate(ul);
 form.addEventListener('submit', (e: Event) => {
   e.preventDefault();
 
+  let values: [string, string, number];
+  values = [tofrom.value, details.value, amount.valueAsNumber];
+
   let doc: HasFormatter;
 
   if (type.value === 'invoice') {
-    doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
+    doc = new Invoice(...values);
   } else {
-    doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
+    doc = new Payment(...values);
   }
 
   //doc은 클래스 Invoice와 클래스 Payment를 모두 받을 수 있다.
