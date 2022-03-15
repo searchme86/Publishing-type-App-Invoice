@@ -1,0 +1,9 @@
+//node_module
+node_modules/
+
+//dist
+dist/
+
+
+//js
+*js
