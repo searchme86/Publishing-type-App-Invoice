@@ -1,4 +1,4 @@
-# Publishing-type-App-payment
+# Publishing-type-App-Invoice
 
 ```
 ** Type of Naming project ** 
