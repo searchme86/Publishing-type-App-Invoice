@@ -14,8 +14,6 @@ export class ListTemplate {
     p.innerText = item.format();
     li.append(p);
 
-    console.log('works?');
-
     if (pos === 'start') {
       this.container.prepend(li);
     } else {
